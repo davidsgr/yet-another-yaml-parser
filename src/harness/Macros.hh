@@ -2,7 +2,7 @@
 /*!
  * \file   src/harness/Macros.hh
  * \brief  Common compiler-specific macros.
- * \note   Copyright (c) 2021 Oak Ridge National Laboratory, UT-Battelle, LLC.
+ * \note   Copyright (c) 2023 Oak Ridge National Laboratory, UT-Battelle, LLC.
  */
 //---------------------------------------------------------------------------//
 #ifndef YAYP_HARNESS_MACROS_HH
