@@ -113,9 +113,9 @@
  */
 #if YAYP_DBC > 2
 #define YAYP_CHECK_ON
-#define YAYP_CHECK(COND) YAYP_VULCAN_ASSERT_(COND, "intermediate")
+#define YAYP_CHECK(COND) YAYP_ASSERT_(COND, "intermediate")
 #else
-#define YAYP_CHECK(COND) YAYP_VULCAN_NOASSERT_(COND, "intermediate")
+#define YAYP_CHECK(COND) YAYP_NOASSERT_(COND, "intermediate")
 #endif
 
 //===========================================================================//

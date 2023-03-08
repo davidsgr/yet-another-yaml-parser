@@ -33,7 +33,7 @@ TEST(DBCTest, GeneralException)
     {
         std::string error_msg = e.what();
         EXPECT_EQ(error_msg,
-                  "Caught Vulcan exception: test\n ^^^ at filename.cc:100");
+                  "Caught YAYP exception: test\n ^^^ at filename.cc:100");
     }
 }
 
@@ -113,8 +113,8 @@ TEST(DBCTest, Ensure)
         EXPECT_EQ(ref_error_msg, error_msg);
     }
 
-    REMEMBER(int a = 1;)
-    EXPECT_NO_THROW(ENSURE(a == 1));
+    YAYP_REMEMBER(int a = 1);
+    EXPECT_NO_THROW(YAYP_ENSURE(a == 1));
 }
 #endif
 
@@ -165,7 +165,7 @@ TEST(DBCTest, NotImplemented)
         std::string ref_error_msg
             = "Unfortunately, Dummy message is not currently implemented.\n "
               "^^^ at "
-              + file + ":190";
+              + file + ":160";
         std::cout << "Not Implemented Error message:" << std::endl;
         std::cout << error_msg << std::endl;
         EXPECT_EQ(ref_error_msg, error_msg);
