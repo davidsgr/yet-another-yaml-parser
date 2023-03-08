@@ -15,9 +15,6 @@ project(YAYP
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# Specify ninja as our generator
-set(CMAKE_GENERATOR "Ninja" CACHE INTERNAL "" FORCE)
-
 # Add project cmake modules to module path
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
@@ -62,6 +59,8 @@ list(APPEND SOURCES
 list(APPEND HEADERS
   src/harness/DBC.hh
   src/harness/Macros.hh
+  src/harness/detail/TestingFunctions.hh
+  src/harness/detail/TestingFunctions.i.hh
   )
 
 # Build and install library
@@ -75,6 +74,7 @@ install(FILES ${HEADERS} DESTINATION ${CMAKE_INSTALL_PREFIX}/include)
 # Build tests
 if (YAYP_ENABLE_TESTS)
   add_subdirectory(src/harness/tests)
+  add_subdirectory(src/harness/detail/tests)
 endif ()
 
 
