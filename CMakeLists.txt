@@ -53,9 +53,6 @@ message(STATUS "YAYP DBC set to " ${YAYP_DBC})
 add_definitions("-DYAYP_DBC=${YAYP_DBC}")
 
 # Add all code
-list(APPEND SOURCES
-  src/harness/DBC.cc
-  )
 list(APPEND HEADERS
   src/harness/DBC.hh
   src/harness/Macros.hh
@@ -65,6 +62,11 @@ list(APPEND HEADERS
   src/harness/Testing.i.hh
   src/harness/detail/TestingFunctions.hh
   src/harness/detail/TestingFunctions.i.hh
+  src/core/FileFunctions.hh
+  )
+list(APPEND SOURCES
+  src/harness/DBC.cc
+  src/core/FileFunctions.cc
   )
 
 # Build and install library
@@ -79,6 +81,7 @@ install(FILES ${HEADERS} DESTINATION ${CMAKE_INSTALL_PREFIX}/include)
 if (YAYP_ENABLE_TESTS)
   add_subdirectory(src/harness/tests)
   add_subdirectory(src/harness/detail/tests)
+  add_subdirectory(src/core/tests)
 endif ()
 
 
