@@ -6,6 +6,7 @@
 # Register test filenames
 include(AddTest)
 add_test(tstFileFunctions.cc)
+add_test(tstStringFunctions.cc)
 
 ##---------------------------------------------------------------------------##
 ## end of packages/Rotordynamics/tests/CMakeLists.txt

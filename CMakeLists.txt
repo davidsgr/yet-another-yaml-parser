@@ -63,10 +63,13 @@ list(APPEND HEADERS
   src/harness/detail/TestingFunctions.hh
   src/harness/detail/TestingFunctions.i.hh
   src/core/FileFunctions.hh
+  src/core/StringFunctions.hh
+  src/core/StringFunctions.i.hh
   )
 list(APPEND SOURCES
   src/harness/DBC.cc
   src/core/FileFunctions.cc
+  src/core/StringFunctions.cc
   )
 
 # Build and install library
