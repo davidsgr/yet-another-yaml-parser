@@ -59,6 +59,10 @@ list(APPEND SOURCES
 list(APPEND HEADERS
   src/harness/DBC.hh
   src/harness/Macros.hh
+  src/harness/SoftEqual.hh
+  src/harness/SoftEqual.i.hh
+  src/harness/Testing.hh
+  src/harness/Testing.i.hh
   src/harness/detail/TestingFunctions.hh
   src/harness/detail/TestingFunctions.i.hh
   )
